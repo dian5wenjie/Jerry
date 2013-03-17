@@ -36,7 +36,7 @@ class MainHandler(tornado.web.RequestHandler):
         }
         if not name :
             self.write("Welcome to Jerry!\n")
-            self.write("娆㈣繋鏉ュ埌Jerry!")
+            self.write("欢迎来到Jerry!")
         else :
             self.write(tornado.escape.json_encode(comment))
 
@@ -47,10 +47,10 @@ class JerryHandler(tornado.web.RequestHandler):
         user = {}
         if not name :
             self.write("Hello jerry!\n")
-            self.write("浣犲ソ锛孞erry!")
+            self.write("你好Jerry!")
         else :
             print "id : %s" % (name)
-            user[name] = "Jerry璺檸"
+            user[name] = "Jerry路虎"
             self.write(tornado.escape.json_encode(user))
 
 
